@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;600;700;800&display=swap');
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+:root {
+    --colorDark1:#112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    color: var(--colorLight2);
+    background-image: linear-gradient(160deg, #112D4E 0%, #3F72AF 100%); /* use angry tool */
+}
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 32px;
+    word-spacing: 3px;
+    letter-spacing: 1.5px;
+}
+.tab-container {
+    max-width: 550px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+.tab {
+    color: white;
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+}
+.tab.current-tab {
+    background-color: rgba(219,226,239,0.5);
+    border-radius: 4px;
+}
+.weather-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 4rem;
+}
+.grant-location-container button {
+    all: unset;
+    color: white;
+    background-color: var(--colorDark2);
+    font-size: 0.85rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+.sub-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.grant-location-container {
+    display: none;
+}
+.grant-location-container.active {
+    display: flex;
+}
+.grant-location-container img {
+    margin-bottom: 2rem;
+}
+.grant-location-container p:nth-of-type(1) {
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+}
+.grant-location-container p:nth-of-type(2) {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+}
+.loading-container{
+    display: none;
+}
+.loading-container.active{
+    display: flex;
+}
+.loading-container p {
+    text-transform: uppercase;
+}
+
+.user-info-container{
+    display: none;
+}
+
+.user-info-container.active{
+    display: flex;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+.user-info-container p{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.user-info-container img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.name p{
+    font-size: 2rem;
+}
+.name img {
+    height: 30px;
+    width: 30px;
+}
+.user-info-container p[data-temp] {
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+.parameter-container {
+    display: flex;
+    gap: 10px 20px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.parameter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 5px;
+    padding: 1rem;
+    gap: 5px 0px;
+}
+.parameter img {
+    width: 50px;
+    height: 50px;
+}
+
+.parameter p:nth-of-type(1) {
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 24px;
+}
+.parameter p:last-of-type {
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.form-container {
+    display: none;
+}
+.form-container.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    width: 90%;
+    max-width: 550px;
+    margin-bottom: 3rem;
+}
+
+.form-container input {
+    all: unset;
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 12px;
+}
+.form-container input:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+.form-container input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+.btn {
+    all: unset;
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorDark2);
+    cursor: pointer;
+}
+
+.error-container {
+    display: none;
+}
+.error-container p {
+    font-size: 2rem;
+    letter-spacing: 1.2px;
+    word-spacing: 4px;
+}
+.error-container.active {
+    display: flex;
+}
